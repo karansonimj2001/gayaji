@@ -1,0 +1,613 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    /* Ensure no default margin */
+    padding: 0;
+    /* Ensure no default padding */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #e78206;
+    /* Orange */
+    color: #000;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    /* Remove any potential margin */
+    padding: 0;
+    /* Adjust padding if needed */
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Basic Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff5623;
+    /* Adjust to your theme color */
+    padding: 10px 20px;
+    position: relative;
+    /* Ensure navbar is positioned properly */
+    z-index: 10;
+    /* Bring navbar above other elements */
+}
+
+.navbar .brand-logo img {
+    width: 150px;
+}
+
+.brand-logo {
+
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navbar links for larger screens */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Media Queries for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+
+    /* Hide the navigation links initially */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #FF5722;
+        /* Adjust to match your theme */
+        position: absolute;
+        top: 60px;
+        /* Adjust below the navbar */
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 9;
+        /* Ensure it stays above content but below navbar */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .nav-links li a {
+        font-size: 20px;
+    }
+}
+
+/* Adjust the landing cover so it's pushed down by the navbar */
+.landing-cover {
+    margin-top: 60px;
+    /* Ensure content starts after the navbar */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Remove any default margin from landing cover */
+.landing-cover {
+    margin: 0;
+    /* Ensure no margin */
+    padding: 20px;
+    /* Adjust padding for spacing */
+    background-color: orange;
+    /* Theme color */
+    color: rgb(167, 14, 14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    text-align: center;
+    position: relative;
+}
+
+.landing-cover img {
+    max-height: 20vh;
+    /* min-height: 20vh; */
+}
+
+.spiritual-text {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jai-shri-ram {
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.om {
+    font-size: 3rem;
+}
+
+.landing-cover h2 {
+    font-size: 2rem;
+    padding: 0 6vh;
+    margin-top: 20vh;
+}
+
+
+
+.why-choose-us-section {
+    border-top: 2px solid #e91717;
+    padding: 40px 20px;
+    background-color: #FFE0B2;
+    /* Light Saffron Yellow for the background */
+    text-align: center;
+}
+
+/* .why-choose-us-section img{
+    
+} */
+.why-choose-us-section h2 {
+    color: #FF5722;
+    /* Orange for the heading */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.why-choose-us-section p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.why-choose-us-section ol {
+
+    list-style-type: decimal;
+    /* Remove default list styling */
+    padding-left: 20px;
+
+}
+
+.why-choose-us-section ol li {
+
+    text-align: left;
+    font-size: 1.1rem;
+    color: #555;
+    padding: 10px 0;
+}
+
+.why-choose-us-section ol li strong {
+    color: #FF5722;
+    /* Orange for emphasis */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@keyframes flicker {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        opacity: 1;
+    }
+
+    10%,
+    30%,
+    70%,
+    90% {
+        opacity: 0;
+    }
+}
+
+.flicker-effect {
+    animation: flicker 10s infinite;
+}
+
+.action-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(255, 205, 7);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: rgb(241, 84, 17);
+    color: white;
+}
+
+.pooja-section {
+    /* background-image: url(latkan.png); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border-top: 2px solid brown ; */
+    padding: 40px 20px;
+    text-align: center;
+    /* background-color:   rgb(255, 205, 7); */
+}
+
+.pooja-section-1 {
+    background-color: orange;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 10px;
+    /* border-bottom:10px solid black ; */
+    box-shadow: 30px 30px rgba(0, 0, 0, 0.2);
+    /* margin-bottom: 40px; */
+    /* align-self: center; */
+    /* margin-top:px ; */
+    /* margin-left: -20px;
+    margin-right: -20px; */
+    /* box-shadow: 0px 1px 2px black; */
+}
+
+.pooja-cards {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Space between cards */
+    justify-content: center;
+}
+
+.card {
+    background-color: orange;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+    width: calc(50% - 15px);
+    /* Set width to 50% of container */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    /* Start hidden for animation */
+    transform: translateX(-50px);
+    /* Start from left */
+}
+
+.card.visible {
+    opacity: 1;
+    /* Make visible */
+    transform: translateX(0);
+    /* Move to original position */
+}
+
+.card h3,
+.card p {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: calc(50% - 10px);
+        /* Keeps two columns on smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        width: 100%;
+        /* Single column on very small screens */
+    }
+}
+
+.pooja-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    /* Adjust the width as needed */
+    height: 200px;
+    /* Adjust the height as needed */
+    background-image: url('latkan\ \(1\).png');
+    /* Replace with your left image path */
+    background-size: cover;
+    background-position: top left;
+    /* opacity: 0.5; */
+    /* Ensure it's behind the content */
+}
+
+.pooja-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    /* Adjust the width as needed */
+    height: 200px;
+    /* Adjust the height as needed */
+    background-image: url('latkan.png');
+    /* Replace with your right image path */
+    background-size: cover;
+    background-position: top right;
+    /* opacity: 0.5;  */
+    /* z-index: -1; Ensure it's behind the content */
+}
+
+.pooja-section {
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    /* Optional: a background color for contrast */
+}
+
+/* Pseudo-element for the left top image */
+
+/* Pseudo-element for the right top image */
+
+.products-section {
+    border-top: 2px solid #FF5722;
+    padding: 40px;
+    background-color: orange;
+    /* Light background color */
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    /* Theme color */
+}
+
+.products-cards {
+    /* padding-top:; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center the cards */
+    gap: 20px;
+    /* Space between cards */
+}
+
+.hexagon-card {
+    background-color: white;
+    /* Card background color */
+    border: 1px solid #ccc;
+    /* Light border */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 20px;
+    width: 200px;
+    /* Set a fixed width for the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateX(-100%);
+    /* Start off-screen to the left */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    /* Smooth transition for the effects */
+}
+
+.hexagon-card.visible {
+    opacity: 1;
+    /* Fully visible when class added */
+    transform: translateX(0);
+    /* Slide into view */
+}
+
+.hexagon-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FF9800;
+    /* Another theme color */
+}
+
+.hexagon-card p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* New Ghar Baithe Dan Section */
+.ghar-baithe-dan-section {
+    border-top: 2px 2px solid black;
+    background-position: center 59%;
+    background-image: url(latkan\ main1.png);
+    background-repeat: no-repeat;
+    background-size: 200px;
+    border-top: 2px #FF5722;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f3f2f2;
+    /* Saffron Yellow */
+}
+
+.ghar-baithe-dan-section h2 {
+    color: rgb(255, 149, 0);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ghar-baithe-dan-images {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+.ghar-baithe-dan-images img {
+    width: 20vh;
+    margin: 0 20px;
+    opacity: 0;
+    /* Start hidden for animation */
+    transform: translateX(0);
+    /* Reset transformation */
+}
+
+.ghar-baithe-daan {
+
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 20px 1px rgb(0, 0, 0);
+    padding: 40px 20px;
+    background-color: #FF9800;
+    /* Saffron Yellow background */
+    color: #fff;
+    /* White text for contrast */
+    text-align: center;
+}
+
+.ghar-baithe-daan h2 {
+    color: #fff;
+    /* White heading */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.ghar-baithe-daan p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.ghar-baithe-daan ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+    /* Remove default list styling */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.ghar-baithe-daan ol li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.ghar-baithe-daan .action-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #FF5722;
+    /* Orange button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ghar-baithe-daan .action-button:hover {
+    background-color: #e64a19;
+    /* Darker orange on hover */
+}
+
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+        /* Start from the right */
+        opacity: 0;
+        /* Fully transparent */
+    }
+
+    50% {
+        opacity: 0.5;
+        /* Partially visible */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* End at original position */
+        opacity: 1;
+        /* Fully visible */
+    }
+}
+
+/* For left image */
+.ghar-baithe-dan-images img:nth-child(2) {
+    animation: slide-in-left 1s forwards;
+    /* Apply slide-in-left animation */
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%);
+        /* Start from the left */
+        opacity: 0;
+        /* Fully transparent */
+    }
+
+    50% {
+        opacity: 0.5;
+        /* Partially visible */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* End at original position */
+        opacity: 1;
+        /* Fully visible */
+    }
+}

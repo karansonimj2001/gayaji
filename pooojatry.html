@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Section 1 -->
+<div id="sectionKunaiActionF">
+    <header>
+        <nav class="navbar">
+            <a href="#" class="brand-logo"><img src="Beige And Brown Traditional Temple Logo (1).png" alt=""></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="pooja.html">Pooja</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content1">
+        <h1>Pind Daan & Shradh in Gaya Ji</h1>
+        <p id="content1">
+            Gaya, a city deeply revered by Hindus and Buddhists alike, is a spiritual beacon in Bihar, India.
+        </p>
+        <button onclick="toggleTranslation(1)">Translate to Hindi</button>
+    </main>
+</div>
+
+<!-- Section 2 -->
+<div id="sectionNaruto">
+    <main class="main-content1">
+        <h1>Vishnu Pad: The Sacred Footprint of Lord Vishnu</h1>
+        <p id="content2">
+            In the heart of the revered Vishnu Pad temple lies the sacred footprint of Lord Vishnu, a symbol cherished in Hinduism.
+        </p>
+        <button onclick="toggleTranslation(2)">Translate to Hindi</button>
+    </main>
+</div>
+
+<!-- Section 3 -->
+<div id="sectionSasuke">
+    <main class="main-content1">
+        <h1>Falgu River: Sacred Waters of Gaya</h1>
+        <p id="content3">
+            The Falgu River, flowing through Gaya, is considered sacred and attracts pilgrims for ritual baths.
+        </p>
+        <button onclick="toggleTranslation(3)">Translate to Hindi</button>
+    </main>
+</div>
+
+<!-- Section 4 -->
+<div id="sectionSakura">
+    <main class="main-content1">
+        <h1>Bodh Gaya: Where Enlightenment Was Attained</h1>
+        <p id="content4">
+            Bodh Gaya is known as the site where Gautama Buddha attained enlightenment under the Bodhi tree.
+        </p>
+        <button onclick="toggleTranslation(4)">Translate to Hindi</button>
+    </main>
+</div>
+
+<!-- Section 5 -->
+<div id="sectionKakashi">
+    <main class="main-content1">
+        <h1>Pretshila Hill: The Sacred Hill for Pind Daan</h1>
+        <p id="content5">
+            Pretshila Hill is an important site in Gaya for performing pind daan rituals.
+        </p>
+        <button onclick="toggleTranslation(5)">Translate to Hindi</button>
+    </main>
+</div>
+
+<!-- Section 6 -->
+<div id="sectionShikamaru">
+    <main class="main-content1">
+        <h1>Akshayabat: The Eternal Banyan Tree</h1>
+        <p id="content6">
+            Akshayabat is a sacred banyan tree in Gaya, symbolizing eternal life and protection.
+        </p>
+        <button onclick="toggleTranslation(6)">Translate to Hindi</button>
+    </main>
+</div>
+
+<!-- Section 7 -->
+<div id="sectionHinata">
+    <main class="main-content1">
+        <h1>Barabar Caves: Ancient Rock-Cut Sanctuaries</h1>
+        <p id="content7">
+            The Barabar Caves in Gaya are considered the oldest rock-cut caves in India.
+        </p>
+        <button onclick="toggleTranslation(7)">Translate to Hindi</button>
+    </main>
+</div>
+
+<!-- Section 8 -->
+<div id="sectionJiraiya">
+    <main class="main-content1">
+        <h1>Surya Kund: Sacred Pond of the Sun God</h1>
+        <p id="content8">
+            Surya Kund is a sacred pond dedicated to the Sun God, where devotees gather for blessings.
+        </p>
+        <button onclick="toggleTranslation(8)">Translate to Hindi</button>
+    </main>
+</div>
+
+<script>
+    function toggleTranslation(sectionNumber) {
+        const englishText = [
+            "Gaya, a city deeply revered by Hindus and Buddhists alike, is a spiritual beacon in Bihar, India.",
+            "In the heart of the revered Vishnu Pad temple lies the sacred footprint of Lord Vishnu, a symbol cherished in Hinduism.",
+            "The Falgu River, flowing through Gaya, is considered sacred and attracts pilgrims for ritual baths.",
+            "Bodh Gaya is known as the site where Gautama Buddha attained enlightenment under the Bodhi tree.",
+            "Pretshila Hill is an important site in Gaya for performing pind daan rituals.",
+            "Akshayabat is a sacred banyan tree in Gaya, symbolizing eternal life and protection.",
+            "The Barabar Caves in Gaya are considered the oldest rock-cut caves in India.",
+            "Surya Kund is a sacred pond dedicated to the Sun God, where devotees gather for blessings."
+        ];
+
+        const hindiText = [
+            "गया, जो हिंदुओं और बौद्धों दोनों के लिए गहराई से पूजनीय है, बिहार, भारत में एक आध्यात्मिक केंद्र है।",
+            "विष्णुपद मंदिर के हृदय में भगवान विष्णु का पवित्र पदचिन्ह है, जो हिंदू धर्म में गहराई से पूजनीय है।",
+            "गया से बहने वाली फल्गु नदी को पवित्र माना जाता है और यह धार्मिक स्नानों के लिए तीर्थयात्रियों को आकर्षित करती है।",
+            "बोधगया को वह स्थान माना जाता है जहां गौतम बुद्ध ने बोधि वृक्ष के नीचे ज्ञान प्राप्त किया।",
+            "पिंडदान अनुष्ठानों के लिए गया में प्रेतशिला पहाड़ी एक महत्वपूर्ण स्थल है।",
+            "अक्षयवट गया में एक पवित्र बरगद का पेड़ है, जो शाश्वत जीवन और सुरक्षा का प्रतीक है।",
+            "गया में बाराबर गुफाएं भारत की सबसे पुरानी चट्टान से काटी गई गुफाएं मानी जाती हैं।",
+            "सूर्य कुंड एक पवित्र तालाब है जो सूर्य देवता को समर्पित है, जहाँ भक्त आशीर्वाद के लिए एकत्र होते हैं।"
+        ];
+
+        const contentElement = document.getElementById(`content${sectionNumber}`);
+        if (contentElement.textContent === englishText[sectionNumber - 1]) {
+            contentElement.textContent = hindiText[sectionNumber - 1];
+        } else {
+            contentElement.textContent = englishText[sectionNumber - 1];
+        }
+    }
+</script>
+
+</body>
+</html>
